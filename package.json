@@ -20,6 +20,8 @@
   "author": "Yerzhan Tashbenbetov",
   "license": "ISC",
   "devDependencies": {
-    "cz-customizable": "^5.3.0"
+    "@commitlint/cli": "^7.2.1",
+    "cz-customizable": "^5.3.0",
+    "husky": "^1.1.4"
   }
 }
