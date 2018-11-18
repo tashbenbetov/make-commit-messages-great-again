@@ -64,9 +64,14 @@ module.exports = {
     confirmCommit: "Вас устраивает получившийся коммит?"
   },
 
+  // Разрешим собственную ОБЛАСТЬ
   allowCustomScopes: true,
+
   // Запрет на Breaking Changes
   allowBreakingChanges: false,
+
+  // Префикс для нижнего колонтитула
+  footerPrefix: "МЕТА ДАННЫЕ:",
 
   // limit subject length
   subjectLimit: 72
