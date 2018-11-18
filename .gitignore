@@ -1,0 +1,10 @@
+# OSX
+#
+.DS_Store
+
+# Visual Studio Code
+.vscode
+
+# node.js
+#
+node_modules/
