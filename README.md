@@ -1,4 +1,4 @@
-### Пример настрйоки commitizen и commitlint
+### Пример настройки commitizen и commitlint
 
 ### Установка
 
