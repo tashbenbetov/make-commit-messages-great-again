@@ -1,5 +1,7 @@
 // Файл создан на основе @commitlint/config-conventional
 
+const cz = require('./commitizen.js')
+
 module.exports = {
   rules: {
     // Тело коммита должно начинаться с пустой строки
@@ -9,10 +11,21 @@ module.exports = {
     "footer-leading-blank": [2, "always"],
 
     // Максимальная длина заголовка 72 символа
-    "header-max-length": [2, "always", 72],
+    "header-max-length": [
+      2,
+      "always",
+      cz.subjectLimit
+    ],
 
     // Область всегда только в нижнем регистре
     "scope-case": [2, "always", "lower-case"],
+
+    // Перечислим все возможные области коммитов
+    'scope-enum': [
+      1,
+      'always',
+      cz.scopes.map(type => type.name)
+    ],
 
     // Описание не может быть пустым
     "subject-empty": [2, "never"],
@@ -30,19 +43,7 @@ module.exports = {
     "type-enum": [
       2,
       "always",
-      [
-        "build",
-        "chore",
-        "ci",
-        "docs",
-        "feat",
-        "fix",
-        "perf",
-        "refactor",
-        "revert",
-        "style",
-        "test"
-      ]
+      cz.types.map(type => type.value)
     ]
   }
 };
